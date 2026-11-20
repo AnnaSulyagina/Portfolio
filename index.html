@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Сулягина | Графический дизайнер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Фоновые картинки (облака) -->
+    <img src="img/1.png" alt="" class="bg-decor bg-decor-1">
+    <img src="img/2.png" alt="" class="bg-decor bg-decor-2">
+    <img src="img/3.png" alt="" class="bg-decor bg-decor-3">
+    <img src="img/4.png" alt="" class="bg-decor bg-decor-4">
+
+    <div class="main-wrapper">
+        <header>
+            <div class="logo">Анна Сулягина</div>
+            
+            <div class="header-controls">
+                <!-- Тумблер с SVG -->
+                <button class="theme-toggle" id="themeToggle" title="Переключить тему" aria-label="Переключить тему">
+                    <span class="toggle-circle"></span>
+                    
+                    <svg class="icon-svg icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    
+                    <svg class="icon-svg icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <button class="burger" id="burger" aria-label="Открыть меню">☰</button>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" onclick="closeMenu()">Обо мне</a>
+                <a href="#skills" onclick="closeMenu()">Навыки</a>
+                <a href="#work" onclick="closeMenu()">Проекты</a>
+                <a href="#contact" onclick="closeMenu()">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Графический<br><span>дизайнер</span></h1>
+                    <p>Привет, я Анна. Люблю природу, творчество и создавать красоту. Моя цель создать дизайн, который подойдёт именно вам и не выйдет из тренда через месяц.</p>
+                </div>
+                <img src="img/фото.jfif" alt="Анна Сулягина" class="hero-img">
+            </section>
+
+            <section class="section" id="about">
+                <div class="about-grid">
+                    <div class="about-block">
+                        <h2 class="section-title">Образование</h2>
+                        <p class="section-text"><strong>2020–2027</strong><br>СПБГУПТД ИИТА, специальность «Прикладная информатика в дизайне».</p>
+                    </div>
+                    <div class="about-block">
+                        <h2 class="section-title">Опыт</h2>
+                        <p class="section-text">Более двух лет на бирже фриланса создаю дизайн для людей, а не по шаблону. Каждый проект — это уникальная история, которую я помогаю визуализировать.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <div class="skills-container">
+                    <h2 class="section-title" style="text-align: left;">Навыки</h2>
+                    <p class="skills-desc">Разработка логотипов, фирменной графики, создание дизайна для печатной и цифровой продукции.</p>
+                    
+                    <div class="about-grid" style="text-align: left;">
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Adobe Photoshop</span><span>8/10</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Adobe Illustrator</span><span>8/10</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Blender</span><span>6/10</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="60%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Нейросети</span><span>3/10</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="30%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Figma</span><span>5/10</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="50%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="work">
+                <h2 class="section-title">Проекты</h2>
+                <div class="carousel-container" id="carouselContainer">
+                    <div class="carousel-track" id="track1">
+                        <div class="carousel-card" onclick="openLightbox(0)">
+                            <img src="img/1.jpg" alt="Проект 1">
+                        </div>
+                        <div class="carousel-card" onclick="openLightbox(1)">
+                            <img src="img/2.jpg" alt="Проект 2">
+                        </div>
+                        <div class="carousel-card" onclick="openLightbox(2)">
+                            <img src="img/3.jpg" alt="Проект 3">
+                        </div>
+                        <div class="carousel-card" onclick="openLightbox(3)">
+                            <img src="img/4.jpg" alt="Проект 4">
+                        </div>
+                        <div class="carousel-card" onclick="openLightbox(4)">
+                            <img src="img/5.jpg" alt="Проект 5">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-btns">
+                    <button class="carousel-btn" onclick="moveCarousel('track1', -1)" aria-label="Назад">←</button>
+                    <button class="carousel-btn" onclick="moveCarousel('track1', 1)" aria-label="Вперед">→</button>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <h2 class="section-title">Контакты</h2>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-top">
+                        <div class="contact-left">
+                            <p>Телефон:<br><a href="tel:+79619737442">+7 961 973-74-42</a></p>
+                            <p>Email:<br><a href="mailto:Anna.Sulyagina@yandex.ru">Anna.Sulyagina@yandex.ru</a></p>
+                        </div>
+
+                        <div class="qr-box">
+                            <img src="img/код-02.jpg" alt="QR код Max">
+                        </div>
+                    </div>
+
+                    <a href="https://max.ru/u/f9LHodD0cOLKrrfZjkEpBjjhaqyEWJCGYJxA0qqbrfkjbP-By6TCurnKPWg" target="_blank" class="btn-write">Написать</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p><strong>Нейросеть:</strong> DeepSeek</p>
+                    <p><strong>Время выполнения:</strong> ~3 часа (с учётом всех правок и Lightbox)</p>
+                </div>
+                <div>
+                    <p><strong>JS-функционал:</strong></p>
+                    <ul class="footer-list">
+                        <li>Адаптивное мобильное меню-бургер</li>
+                        <li>Интерактивная карусель проектов (кнопки + колесико мыши)</li>
+                        <li>Плавная анимация заполнения шкал навыков при скролле</li>
+                        <li>Переключение светлой/тёмной темы с сохранением в localStorage</li>
+                        <li>Всплывающее окно (Lightbox) для просмотра фото с листанием</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно (Lightbox) -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Просмотр">
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
